@@ -1,0 +1,19 @@
+<div class="container-flight-details">
+  <div class="container-top">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Bureau_Veritas.svg/1200px-Bureau_Veritas.svg.png"
+      alt="Your Image Alt Text"
+    />
+  </div>
+  <div class="container-bottom">
+    <div class="container-heading">
+      <p style="font-weight: bold; margin-top: 14%; ">FLIGHT DETAILS</p>
+      <button (click)="openModal()" class="edit">Edit</button>
+    </div>
+    <hr />
+    <p>Register NB: {{ flightDetails.registerNb }}</p>
+    <p>Component NB: {{ flightDetails.compartmentNb }}</p>
+    <p>Job NB: {{ flightDetails.jobNb }}</p>
+    <p>Flight NB: {{ flightDetails.flightNb }}</p>
+  </div>
+</div>

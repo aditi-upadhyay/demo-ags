@@ -1,0 +1,41 @@
+<div class="container">
+  <p>Flight Details</p>
+  <div class="form-container">
+    <form #save="ngForm" (ngSubmit)="onSave(save.value)">
+      <div class="form-group">
+        <div style="display: flex; flex-direction: row; margin-top: 10px;">
+          <div>
+            <label for="name">Register NB</label>
+            <input type="text" name="registerNb" class="form-control" ngModel />
+          </div>
+          <div>
+            <label for="name">Compartment NB</label>
+            <input
+              type="text"
+              name="compartmentNb"
+              class="form-control"
+              ngModel
+            />
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; margin-top: 20px;">
+          <div>
+            <label for="name">Job NB</label>
+          <input type="text" name="jobNb" class="form-control" ngModel />
+           
+          </div>
+          <div>
+            <label for="name">Flight NB</label>
+            <input type="text" name="flightNb" class="form-control" ngModel />
+          </div>
+        </div>
+        
+      </div>
+      
+      <button type="button" (click)="onReset(save)">Reset</button>
+
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>

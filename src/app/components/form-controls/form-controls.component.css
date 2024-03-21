@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+}
+p {
+  font-weight: bold;
+}
+
+.container {
+  text-align: center;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"] {
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  width: 70%;
+  padding: 9px 0px 10px 15px;
+}
+input[type="text"]:focus {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+label {
+  margin-top: 20px;
+}
+button {
+  background-color: rgb(168, 8, 8);
+  padding: 10px 19px;
+  color: white;
+  width: fit-content;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: 11%;
+}

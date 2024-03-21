@@ -1,0 +1,80 @@
+<div class="container-preview">
+  <div class="container-top">
+    <p class="boldText">Upload Files</p>
+    <hr class="dashed-line" style="margin-left: 128px" />
+  </div>
+  <div class="container-dnd">
+    <span class="material-icons custom-icon"> upload_file </span>
+    <input
+      type="file"
+      #fileInputEfly
+      style="display: none"
+      (change)="onFileSelected($event)"
+      accept=".efly"
+    />
+    <button (click)="openFileDialog('efly')">Browse to the files</button>
+    <p>.efly file supported**</p>
+  </div>
+  <div class="heading" *ngIf="eflyFileSelected">
+    <p class="boldText">UPLOADED FILES</p>
+    <hr class="dashed-line" />
+    <div class="container-uploaded-files">
+      <mat-icon class="custom-icon custom-icon-style">content_copy</mat-icon>
+      <p class="fileExt">
+        {{ eflyFileName }}
+      </p>
+      <p class="fileSize">
+        {{ eflyFileSize }}
+      </p>
+      <input
+        type="file"
+        #otherFiles
+        style="display: none"
+        accept=".las, .csv, .stn"
+        multiple
+        (change)="onFileSelected($event)"
+      />
+    </div>
+    <div
+      *ngIf="fileDetails.length >= 1"
+      style="display: flex; flex-direction: row; gap: 35px"
+    >
+      <div
+        *ngFor="let index of [].constructor(repeatDiv); let i = index"
+        style="margin-left: 10px"
+      >
+        <div class="dynamic-div">
+          <mat-icon
+            class="custom-icon custom-icon-style"
+            style="margin-top: 30px"
+            >content_copy</mat-icon
+          >
+
+          <p class="fileExt" style="margin-top: 0%">
+            Document .{{ fileDetails[i].extension }}
+          </p>
+          <p class="fileSize">
+            {{ fileDetails[i].size }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div *ngFor="let file of incorrectFiles">
+        <p class="errorText">
+          {{ "Incorrect File: " + file }}
+        </p>
+      </div>
+    </div>
+    <p
+      *ngIf="repeatDiv > 0 && repeatDiv !== 3 && incorrectFiles.length == 0"
+      class="errorText"
+    >
+      Select all the files
+    </p>
+    <button class="container-proceed" (click)="openFileDialog('otherFiles')">
+      Proceed
+    </button>
+  </div>
+</div>

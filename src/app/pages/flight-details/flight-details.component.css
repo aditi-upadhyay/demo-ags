@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+p ,button{
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+}
+p{
+  margin-left: 10px;
+}
+
+
+.container-top {
+  text-align: center;
+}
+
+.edit{
+  background-color: rgb(168, 8, 8);
+    padding: 10px 19px;
+    color: white;
+    width: fit-content;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: 11%;
+  height: 37px;
+}
+.container-top img {
+  max-width: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+}
+.container-heading{
+  display: flex;
+  gap: 40px
+}

@@ -1,1 +1,33 @@
+# Node modules
+node_modules/
+
+# Compiled output
+dist/
+
+# Local environment variables
+.env
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.iml
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Log files
+npm-debug.log*
+
+# Build process files
+.angular-config.json
+.angular-cli.json
+.angular.json
+.karma.conf.js
+.npmrc
+
+package-lock.json
+
 /folderOutputAgs
+/sample-data
+assets
